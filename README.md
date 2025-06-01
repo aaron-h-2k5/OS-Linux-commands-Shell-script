@@ -42,24 +42,22 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
-
+![alt text](image.png)
 
 cat < file2
 ## OUTPUT
-
+![alt text](image-1.png)
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+![alt text](image-2.png)
 comm file1 file2
  ## OUTPUT
-
- 
+![alt text](image-3.png)
 diff file1 file2
 ## OUTPUT
-
+![alt text](image-4.png)
 
 #Filters
 
@@ -82,18 +80,16 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
-
-
+![alt text](image-6.png)
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+![alt text](image-5.png)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+![alt text](image-7.png)
 
 cat < newfile 
 ```
@@ -107,40 +103,38 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+![alt text](image-8.png)
 
 
 grep hello newfile 
 ## OUTPUT
-
-
+![alt text](image-9.png)
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+![alt text](image-10.png)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
-
+![alt text](image-11.png)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+![alt text](image-12.png)
 
 
 grep -R ubuntu /etc
 ## OUTPUT
 
-
+![alt text](image-13.png)
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![alt text](image-14.png)
 
 cat < newfile 
 ```
@@ -163,60 +157,36 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+![alt text](image-15.png)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+![alt text](image-16.png)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+![alt text](image-17.png)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![alt text](image-18.png)
 
 
 egrep '(world$)' newfile 
-## OUTPUT
-
-
-
 egrep '(World$)' newfile 
-## OUTPUT
-
-
 egrep '((W|w)orld$)' newfile 
-## OUTPUT
-
-
-
 egrep '[1-9]' newfile 
-## OUTPUT
-
-
-
 egrep 'Linux.*world' newfile 
-## OUTPUT
-
-
 egrep 'Linux.*World' newfile 
-## OUTPUT
-
-
 egrep l{2} newfile
-## OUTPUT
-
-
-
 egrep 's{1,2}' newfile
-## OUTPUT 
 
+## OUTPUT 
+![alt text](image-19.png)
 
 cat > file23
 ```
@@ -233,80 +203,29 @@ cat > file23
 
 
 sed -n -e '3p' file23
-## OUTPUT
-
-
-
 sed -n -e '$p' file23
-## OUTPUT
-
-
-
 sed  -e 's/Ram/Sita/' file23
-## OUTPUT
-
-
-
 sed  -e '2s/Ram/Sita/' file23
-## OUTPUT
-
-
-
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
-
-
+![](image-20.png)
 
 sed -n -e '1,5p' file23
-## OUTPUT
-
-
-
 sed -n -e '2,/Joe/p' file23
-## OUTPUT
-
-
-
-
 sed -n -e '/tom/,/Joe/p' file23
-## OUTPUT
-
-
-
 seq 10 
-## OUTPUT
-
-
-
 seq 10 | sed -n '4,6p'
-## OUTPUT
-
-
-
 seq 10 | sed -n '2,~4p'
-## OUTPUT
-
-
-
 seq 3 | sed '2a hello'
-## OUTPUT
-
-
-
 seq 2 | sed '2i hello'
-## OUTPUT
-
-
 seq 10 | sed '2,9c hello'
-## OUTPUT
-
-
 sed -n '2,4{s/^/$/;p}' file23
+sed -n '2,4{s/$/*/;p}' file23
+
 ## OUTPUT
 
 
 
-sed -n '2,4{s/$/*/;p}' file23
 
 
 #Sorting File content
@@ -372,8 +291,6 @@ tar -cvf backup.tar *
 mkdir backupdir
  
 mv backup.tar backupdir
-
-cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
